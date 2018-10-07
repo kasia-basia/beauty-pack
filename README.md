@@ -1,2 +1,2 @@
 # WarsztatHTML
-Warszataty HTML 5.10.2018
+Ćwiczenie HTML i CSS na warszatach w Coders Lab
