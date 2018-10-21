@@ -1,0 +1,100 @@
+.main-contact{
+  padding-top: 45px;
+
+  .section-title{
+    margin-bottom: 30px;
+  }
+}
+
+.form{
+  display: flex;
+  justify-content: space-between;
+
+  &-left{
+    width: 635px;
+  }
+  &-right{
+    width: 345px;
+  }
+
+  &-img{
+    height: 210px;
+    background-image: url("../images/red_chair.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: -35px;
+  }
+
+  &-row{
+    margin-bottom: 25px;
+
+  }
+  &-control{
+    height: 65px;
+    width: 90%;
+    border: 2px solid $primary-light20;
+    outline: none;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 0 10px;
+    border-radius: 10px;
+  }
+
+  &-control::placeholder{
+    color: $text;
+    font-size: 18px;
+  }
+
+  textarea.form-control{
+    min-height: 190px;
+    resize: none;
+    padding: 10px;
+  }
+
+  &-control:focus{
+    box-shadow: inset 0 0 10px $primary-light10; /*/ dzięki temu ze jest box shadow to nie skacze*/
+  }
+
+  &-chechbox {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #666666;
+    margin-top: 20px;
+  }
+
+  &-chechbox input{
+    font-size: 18px;
+    width: 45px;
+    height: 45px;
+    @include mainBord;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10px;
+    flex-shrink: 0;
+
+  }
+
+  &-chechbox input:checked{
+    background: url("../images/form_ok.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+    background-position: center;
+  }
+
+
+  &-submit{
+    width: 100%;
+    height: 70px;
+    font-size: 34px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: white;
+    letter-spacing: 1px;
+    background-color: $primary-multiply;
+  }
+
+}
