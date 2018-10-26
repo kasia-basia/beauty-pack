@@ -250,7 +250,7 @@ body{
 }
 
 .banner-slide-img{
-    background-image: url(../images/black_chair.png);
+    background-image: url(../../images/black_chair.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 -25px;
@@ -318,7 +318,7 @@ body{
 
 .form-img{
     height: 210px;
-    background-image: url("../images/red_chair.png");
+    background-image: url("../../images/red_chair.png");
     background-repeat: no-repeat;
     background-position: center;
     margin-top: -35px;
@@ -374,7 +374,7 @@ textarea.form-control{
 }
 
 .form-chechbox input:checked{
-    background: url("../images/form_ok.jpg");
+    background: url("../../images/form_ok.jpg");
     background-repeat: no-repeat;
     background-size: auto 80%;
     background-position: center;
