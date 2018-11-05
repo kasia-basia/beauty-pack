@@ -1,10 +1,43 @@
-// HIDE ARTICLE TITLES
+// ========= SLIDER =========== //
+var prev = document.querySelector('.banner-prev');
+var next = document.querySelector('.banner-next');
+var slides = document.querySelector('.banner-slides');
+var uniqueSlides = document.querySelectorAll('.banner-slide');
+var index = 0;
+
+prev.addEventListener('click', function (e) {
+    index --;
+    if(index < 0){
+        console.log('too far!');
+        index = 0;
+        console.log(index);
+    } else {
+        slides.style.left = (-100 * index) + '%';
+        console.log(index);
+    }
+    
+});
+
+next.addEventListener('click', function (e) {
+    index ++;
+    if(index > uniqueSlides.length-1){
+        console.log('too far!');
+        index = 0;
+        slides.style.left = '0';
+        console.log(index);
+    } else {
+        slides.style.left = (-100 * index) + '%';
+        console.log(index);
+    }
+
+});
+// =========  HIDE ARTICLE TITLES =========== //
 
 var articleBar = document.querySelectorAll('.article-box');
 articleBar.forEach(function (e) {
     var textBar = document.querySelectorAll('.article-box-bar');
 
-    // OPACITY EASE
+    // OPACITY EASE VARIANT
     /*e.addEventListener('mouseenter', function (element) {
         var bar = e.querySelector('.article-box-bar');
         bar.classList.add('hide');
@@ -62,9 +95,10 @@ prev.addEventListener('click', function (e) {
 */
 
 
-//KALKULATOR
 
-// DROPDOWN
+// =========  KALKULATOR =========== //
+
+// =========  DROPDOWN =========== //
 var dropdown = document.querySelectorAll('.drop_down_list');
 
 dropdown.forEach(function (e) {
@@ -106,7 +140,7 @@ var pattern = document.querySelector('.pattern');
 var patternElement = document.querySelectorAll('.list-pattern li');
 var patternValue = document.querySelector('.pattern.value');
 
-// NAZWA
+/// =========  NAZWA =========== //
 titleElement.forEach(function (e) {
     e.addEventListener('click', function (element) {
         var value = e.innerHTML;
@@ -129,7 +163,7 @@ titleElement.forEach(function (e) {
     });
 });
 
-// KOLOR
+// =========  KOLOR =========== //
 colorElement.forEach(function (e) {
     e.addEventListener('click', function (element) {
         var span = document.querySelector('.list-color > span');
@@ -141,7 +175,7 @@ colorElement.forEach(function (e) {
     });
 });
 
-// MATERIAŁ
+// =========  MATERIAŁ =========== //
 patternElement.forEach(function (e) {
     e.addEventListener('click', function (element) {
         var span = document.querySelector('.list-pattern > span');
@@ -161,7 +195,7 @@ patternElement.forEach(function (e) {
     })
 });
 
-// TRANSPORT CHECKBOX
+// =========  TRANSPORT =========== //
 var transport = document.getElementById('transport');
 var transportValue = document.querySelector('.transport.value');
 var transportPrice = 40;
@@ -179,18 +213,15 @@ transport.addEventListener('click', function (e) {
     updateSum()
 });
 
-// SUMA
+// =========  SUMA =========== //
 
 function updateSum() {
     var titleSum = document.querySelector('.title.value').innerText || 0;
     var patternSum = document.querySelector('.pattern.value').innerText || 0;
-    var transportSum = document.querySelector('.transport.value').innerText || 0
-    var sumDisplay = document.querySelector('.sum strong');
-    console.log(sumDisplay);
+    var transportSum = document.querySelector('.transport.value').innerText || 0;
     // var colorSum = document.querySelector('.color.value').innerText ;
-    var sumValue = 0;
-    sumValue = parseInt(titleSum) + parseInt(patternSum) + parseInt(transportSum);
-    sumDisplay.innerText = sumValue;
+    var sumDisplay = document.querySelector('.sum strong');
+    sumDisplay.innerText = parseInt(titleSum) + parseInt(patternSum) + parseInt(transportSum);
 }
 
 
