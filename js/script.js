@@ -1,36 +1,5 @@
-// ========= SLIDER =========== //
-var prev = document.querySelector('.banner-prev');
-var next = document.querySelector('.banner-next');
-var slides = document.querySelector('.banner-slides');
-var uniqueSlides = document.querySelectorAll('.banner-slide');
-var index = 0;
 
-prev.addEventListener('click', function (e) {
-    index --;
-    if(index < 0){
-        console.log('too far!');
-        index = 0;
-        console.log(index);
-    } else {
-        slides.style.left = (-100 * index) + '%';
-        console.log(index);
-    }
-    
-});
 
-next.addEventListener('click', function (e) {
-    index ++;
-    if(index > uniqueSlides.length-1){
-        console.log('too far!');
-        index = 0;
-        slides.style.left = '0';
-        console.log(index);
-    } else {
-        slides.style.left = (-100 * index) + '%';
-        console.log(index);
-    }
-
-});
 // =========  HIDE ARTICLE TITLES =========== //
 
 var articleBar = document.querySelectorAll('.article-box');
@@ -61,39 +30,6 @@ articleBar.forEach(function (e) {
 
 });
 
-// SLIDER
-/*
-
-var prev = document.querySelector('.banner-prev');
-var next = document.querySelector('.banner-next');
-var list = document.querySelectorAll('.banner-list li img');
-var index = 0;
-
-next.addEventListener('click', function (e) {
-
-    list[index].classList.remove('active');
-
-    index++;
-    if (index > list.length - 1) {
-        index = 0;
-    }
-
-    list[index].classList.add('active');
-});
-
-prev.addEventListener('click', function (e) {
-
-    list[index].classList.remove('active');
-    index--;
-
-    if (index < 0) {
-        index = list.length - 1;
-    }
-
-    list[index].classList.add('active');
-});
-*/
-
 
 
 // =========  KALKULATOR =========== //
@@ -119,109 +55,127 @@ dropdown.forEach(function (e) {
     })
 });
 
-var chairPrice = {
-    Margarita: 249,
-    Clair: 299,
-    Selena: 499,
+var planPrice = {
+    Basic: 48.99,
+    Perfect: 39.99,
+    Expert: 34.99,
 };
 
-var patternPrice = {
-    Tkanina: 0,
-    Skora: 120,
+var subscriptionPrice = {
+    single: 0,
+    sixMonths: 10.00,
+    twelveMonths : 33.00,
 };
+
+var deliveryPrice = {
+    Regular: 0,
+    Express: 9.99,
+};
+
 // POBIERANIE i przekazywanie WARTOŚCI - NAZWA, KOLOR, MATERIAŁ
 
-var titleElement = document.querySelectorAll('.list-title li');
-var title = document.querySelector('.title');
-var titleValue = document.querySelector('.title.value');
-var colorElement = document.querySelectorAll('.list-color li');
-var color = document.querySelector('.color');
-var pattern = document.querySelector('.pattern');
-var patternElement = document.querySelectorAll('.list-pattern li');
-var patternValue = document.querySelector('.pattern.value');
+var planElement = document.querySelectorAll('.list-plan li');
+var plan = document.querySelector('.plan');
+var planValue = document.querySelector('.plan.value');
+var subscriptionElement = document.querySelectorAll('.list-subscription li');
+var subscription = document.querySelector('.subscription');
+var subscriptionValue = document.querySelector('.subscription.value');
+var delivery = document.querySelector('.delivery');
+var deliveryElement = document.querySelectorAll('.list-delivery li');
+var deliveryValue = document.querySelector('.delivery.value');
 
-/// =========  NAZWA =========== //
-titleElement.forEach(function (e) {
+/// =========  PLAN =========== //
+planElement.forEach(function (e) {
     e.addEventListener('click', function (element) {
         var value = e.innerHTML;
-        var span = document.querySelector('.list-title > span');
-        title.innerText = value;
+        var span = document.querySelector('.list-plan > span');
+        plan.innerText = value;
         span.innerText = value;
 
         switch (value) {
-            case 'Margarita':
-                titleValue.innerText = chairPrice.Margarita;
+            case 'Basic':
+                planValue.innerText = planPrice.Basic;
                 break;
-            case 'Clair':
-                titleValue.innerText = chairPrice.Clair;
+            case 'Perfect':
+                planValue.innerText = planPrice.Perfect;
                 break;
-            case 'Selena':
-                titleValue.innerText = chairPrice.Selena;
+            case 'Expert':
+                planValue.innerText = planPrice.Expert;
                 break;
         }
         updateSum();
     });
 });
 
-// =========  KOLOR =========== //
-colorElement.forEach(function (e) {
+// =========  SUBSCRIPTION =========== //
+subscriptionElement.forEach(function (e) {
     e.addEventListener('click', function (element) {
-        var span = document.querySelector('.list-color > span');
+        var span = document.querySelector('.list-subscription > span');
         var value = e.innerHTML;
-        color.innerText = value;
-        span.innerText = value;
-        updateSum();
-
-    });
-});
-
-// =========  MATERIAŁ =========== //
-patternElement.forEach(function (e) {
-    e.addEventListener('click', function (element) {
-        var span = document.querySelector('.list-pattern > span');
-        var value = e.innerHTML;
-        pattern.innerText = value;
+        subscription.innerText = value;
         span.innerText = value;
 
         switch (value) {
-            case 'Tkanina':
-                patternValue.innerText = patternPrice.Tkanina;
+            case 'Single purchase':
+                subscriptionValue.innerText = subscriptionPrice.single;
                 break;
-            case 'Skóra':
-                patternValue.innerText = patternPrice.Skora;
+            case '6 months':
+                subscriptionValue.innerText = subscriptionPrice.sixMonths;
+                break;
+            case '12 months':
+                subscriptionValue.innerText = subscriptionPrice.twelveMonths;
+                break;
+        }
+        updateSum();
+    });
+});
+
+// =========  DELIVERY =========== //
+deliveryElement.forEach(function (e) {
+    e.addEventListener('click', function (element) {
+        var span = document.querySelector('.list-delivery > span');
+        var value = e.innerHTML;
+        delivery.innerText = value;
+        span.innerText = value;
+
+        switch (value) {
+            case 'Regular':
+                deliveryValue.innerText = deliveryPrice.Regular;
+                break;
+            case 'Express':
+                deliveryValue.innerText = deliveryPrice.Express;
                 break;
         }
         updateSum();
     })
 });
 
-// =========  TRANSPORT =========== //
-var transport = document.getElementById('transport');
-var transportValue = document.querySelector('.transport.value');
-var transportPrice = 40;
+// =========  GIFT WRAP =========== //
+var gift = document.getElementById('gift');
+var giftValue = document.querySelector('.gift.value');
+var giftPrice = 10;
 
-transport.addEventListener('click', function (e) {
-    var span = document.querySelector('span.transport');
+gift.addEventListener('click', function (e) {
+    var span = document.querySelector('span.gift');
 
-    if (transport.checked === true){
-        transportValue.innerHTML = transportPrice;
-        span.innerText = 'Transport';
+    if (gift.checked === true){
+        giftValue.innerHTML = giftPrice;
+        span.innerText = 'Gift wrapping';
     } else {
-        transportValue.innerHTML = '';
+        giftValue.innerHTML = '';
         span.innerText = '';
     }
     updateSum()
 });
 
-// =========  SUMA =========== //
+// =========  SUM =========== //
 
 function updateSum() {
-    var titleSum = document.querySelector('.title.value').innerText || 0;
-    var patternSum = document.querySelector('.pattern.value').innerText || 0;
-    var transportSum = document.querySelector('.transport.value').innerText || 0;
-    // var colorSum = document.querySelector('.color.value').innerText ;
+    var planSum = document.querySelector('.plan.value').innerText || 0;
+    var deliverySum = document.querySelector('.delivery.value').innerText || 0;
+    var subscriptionSum = document.querySelector('.subscription.value').innerText || 0;
     var sumDisplay = document.querySelector('.sum strong');
-    sumDisplay.innerText = parseInt(titleSum) + parseInt(patternSum) + parseInt(transportSum);
+    sumDisplay.innerText =(Number(planSum)+ Number(deliverySum) + Number(subscriptionSum)).toFixed(2);
 }
 
 
