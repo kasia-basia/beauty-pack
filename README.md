@@ -7,5 +7,5 @@ HTML, SASS, gulp, JavaScript (ES6)
 
 #### coming soon  
 
-Please note that this is a work in progress. Current goals:
+Please note that this is a work in progress. This is what I'm currently working on:
 * adding RWD
