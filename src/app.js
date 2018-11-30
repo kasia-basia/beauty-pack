@@ -6,5 +6,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
     new Calculator();
     new Slider('.banner');
     new HideTitles();
-
   });
