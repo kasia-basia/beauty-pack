@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "adfab-gulp-boilerplate": "^2.2.4"
+    "adfab-gulp-boilerplate": "^2.2.4",
+    "jquery": "^3.3.1"
   }
 }

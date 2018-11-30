@@ -4,13 +4,12 @@
     <meta charset="utf-8">
     <title>Beauty Pack</title>
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
+    <!--<link rel="stylesheet" href="css/normalize.css" type="text/css">-->
     <link rel="stylesheet" href="css/main.css">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
-          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 </head>
 <body>
 <!-- Header -->
@@ -238,35 +237,27 @@
                     </header>
 
                     <div class="form form-calc">
-                        <div class="drop_down_list list-plan">
-                            <span class="list_label">Choose your plan</span>
-                            <span class="list_arrow"></span>
-                            <ul class="list_panel ">
-                                <li>Basic</li>
-                                <li>Perfect</li>
-                                <li>Expert</li>
-                            </ul>
-                        </div>
-                        <div class="drop_down_list list-subscription">
-                            <span class="list_label">Choose your subscription</span>
-                            <span class="list_arrow"></span>
-                            <ul class="list_panel ">
-                                <li>Single purchase</li>
-                                <li>6 months</li>
-                                <li>12 months</li>
-                            </ul>
-                        </div>
-                        <div class="drop_down_list list-delivery">
-                            <span class="list_label">Choose transport</span>
-                            <span class="list_arrow"></span>
-                            <ul class="list_panel ">
-                                <li>Regular</li>
-                                <li>Express</li>
-                            </ul>
-                        </div>
+
+                        <label for="plan">Choose your plan</label><select name="plan" id="plan">
+                            <option value="34.99">Basic</option>
+                            <option value="39.99">Perfect</option>
+                            <option value="48.99">Expert</option>
+                        </select>
+
+                        <label for="subscription">Choose your skin type</label><select name="skin" id="skin">
+                            <option value="Dry">Dry</option>
+                            <option value="Oliy">Oily</option>
+                            <option value="Mixed">Mixed</option>
+                        </select>
+
+                        <label for="delivery">Choose delivery option</label><select name="delivery" id="delivery">
+                            <option value="8.99">Regular</option>
+                            <option value="14.99">Express</option>
+                        </select>
+
                         <div class="checkbox check-box">
-                            <input type="checkbox" id="gift">
-                            <label for="gift">Gift package</label>
+                            <input type="checkbox" id="gift" value="9.99">
+                            <label for="gift">Wrap as a gift</label>
                         </div>
 
                     </div>
@@ -283,16 +274,16 @@
 
                         <div class="panel_left">
                             <h4 class="plan"></h4>
-                            <span class="subscription"></span>
+                            <span class="skin"></span>
                             <span class="delivery"></span>
                             <span class="gift"></span>
                         </div>
 
                         <div class="panel_right">
-                            <h4 class="plan value"></h4>
-                            <span class="subscription value"></span>
-                            <span class="delivery value"></span>
-                            <span class="gift value"></span>
+                            <h4 class="plan-value"></h4>
+                            <span class="skin-value"></span>
+                            <span class="delivery-value"></span>
+                            <span class="gift-value"></span>
                         </div>
 
                     </div>

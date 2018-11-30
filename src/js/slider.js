@@ -20,7 +20,6 @@ class Slider {
 
         clearTimeout(this.time);
         this.time = setTimeout(() => this.nextSlide(), this.delay);
-
     }
 
     prevSlide() {
