@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="256" height="64" src="http://kasialach.pl/images/slice1.png">
+  <img height='70px' src="http://kasialach.pl/images/slice1.png">
 </p>
 
 # Beauty Pack
