@@ -41,7 +41,7 @@ body{
 }
 
 .btn{
-  border-radius: 10px;
+  border-radius: 50px;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block; /*ZAWSZE DO BUTTONÓW*/
@@ -55,6 +55,7 @@ body{
   background-color: $primary-multiply;
   color: white;
   text-align: center;
+  font-family: "Muli", sans-serif;
 }
 
 .btn:hover{

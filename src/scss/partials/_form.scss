@@ -17,18 +17,18 @@
     width: 345px;
   }
 
-  &-img {
-    height: 210px;
-    background-image: url("../images/red_chair.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-top: -35px;
-  }
+  //&-img {
+  //  height: 210px;
+  //  background-image: url("../images/red_chair.png");
+  //  background-repeat: no-repeat;
+  //  background-position: center;
+  //  margin-top: -35px;
+  //}
 
   &-row {
     margin-bottom: 25px;
-
   }
+
   &-control {
     height: 65px;
     width: 90%;
@@ -41,7 +41,8 @@
 
   &-control::placeholder {
     color: $text;
-    font-size: 18px;
+    font-size: 14px;
+    font-family: 'Muli', sans-serif;
   }
 
   textarea.form-control {

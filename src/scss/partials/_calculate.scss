@@ -6,64 +6,91 @@
   .form-calc {
     margin-top: 15px;
     flex-direction: column;
+    padding-right: 300px;
   }
+
+  .form-calc label{
+    color: $text;
+    margin: 20px 0 10px 0;
+  }
+
+  .form-select  {
+    appearance: none;
+    padding: 5px 5px 5px 10px;
+    outline: none;
+    border: 1px solid $primary;
+    border-radius: 20px;
+    color: $text;
+    font-family: 'Muli', sans-serif;
+    position: relative;
+    background-image: url("../images/arrow2_2.png");
+    background-repeat: no-repeat;
+    background-position: 285px;
+
+
+  }
+  
+
+
+
+
 
   // DROP DOWN LIST
 
-  .drop_down_list {
-    border: 1px solid $primary;
-    width: 280px;
-    height: 40px;
-    background-color: white;
-    margin-top: 20px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-  }
+  //.drop_down_list {
+  //  border: 1px solid $primary;
+  //  width: 280px;
+  //  height: 40px;
+  //  background-color: white;
+  //  margin-top: 20px;
+  //  position: relative;
+  //  display: flex;
+  //  align-items: center;
+  //  padding-left: 10px;
+  //}
 
   /*DROPDOWN*/
-  .list_label {
-    color: $text;
-    font-size: 20px;
-    font-weight: 300;
-  }
-
-  .list_arrow {
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 15px solid $primary;
-    display: block;
-    position: absolute;
-    right: 8px;
-    top: 12px;
-    cursor: pointer;
-  }
-
-  .list_panel {
-    background-color: white;
-    border: 1px solid $primary;
-    width: 280px;
-    list-style: none;
-    left: -1px;
-    z-index: 2;
-    position: absolute;
-    top: 22px;
-    visibility: hidden;
-    padding: 0;
-  }
-
-  .list_panel li {
-    padding: 10px;
-    cursor: pointer;
-    color: $text;
-
-    &:hover {
-      background-color: $primary-light20;
-    }
-  }
+  //.list_label {
+  //  color: $text;
+  //  font-size: 20px;
+  //  font-weight: 300;
+  //}
+  //
+  //.list_arrow {
+  //  width: 0;
+  //  height: 0;
+  //  border-left: 15px solid transparent;
+  //  border-right: 15px solid transparent;
+  //  border-top: 15px solid $primary;
+  //  display: block;
+  //  position: absolute;
+  //  right: 8px;
+  //  top: 12px;
+  //  cursor: pointer;
+  //}
+  //
+  //.list_panel {
+  //  background-color: white;
+  //  border: 1px solid $primary;
+  //  width: 280px;
+  //  list-style: none;
+  //  left: -1px;
+  //  z-index: 2;
+  //  position: absolute;
+  //  top: 22px;
+  //  visibility: hidden;
+  //  padding: 0;
+  //}
+  //
+  //.list_panel li {
+  //  padding: 10px;
+  //  cursor: pointer;
+  //  color: $text;
+  //
+  //  &:hover {
+  //    background-color: $primary-light20;
+  //  }
+  //}
 
   // CHECKBOX
 
