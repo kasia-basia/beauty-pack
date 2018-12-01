@@ -9,21 +9,25 @@
 .form {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+
+  @media #{$tablet} {
+    flex-direction: initial;
+  }
 
   &-left {
-    width: 635px;
-  }
-  &-right {
-    width: 345px;
+    width: 100%;
+    @media #{$tablet} {
+      width: 635px;
+    }
   }
 
-  //&-img {
-  //  height: 210px;
-  //  background-image: url("../images/red_chair.png");
-  //  background-repeat: no-repeat;
-  //  background-position: center;
-  //  margin-top: -35px;
-  //}
+  &-right {
+    width: 100%;
+    @media #{$tablet} {
+      width: 345px;
+    }
+  }
 
   &-row {
     margin-bottom: 25px;

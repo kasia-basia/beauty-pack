@@ -6,7 +6,10 @@
   .form-calc {
     margin-top: 15px;
     flex-direction: column;
-    padding-right: 300px;
+
+    @media #{$tablet} {
+      padding-right: 300px;
+    }
   }
 
   .form-calc label{
