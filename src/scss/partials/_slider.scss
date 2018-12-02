@@ -30,7 +30,7 @@
   //overflow: hidden;
 
   .banner-next, .banner-prev {
-    width: 25px;
+    width: 0;
     font-size: 50px;
     font-weight: 300;
     color: white;
@@ -47,6 +47,18 @@
       width: 85px;
     }
   }
+
+  .fa-angle-left, .fa-angle-right{
+    transform: translate(-50%);
+    @media #{$tablet} {
+      transform: translate(100%);
+    }
+    @media #{$desktop} {
+      transform: translate(100%);
+    }
+
+  }
+
 
   .banner-next {
     right: 0;

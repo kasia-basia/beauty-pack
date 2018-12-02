@@ -10,7 +10,7 @@ class HideTitles {
 
             e.addEventListener('mouseenter', function (element) {
                 var bar = e.querySelector('.article-box-bar');
-                bar.style.bottom = '-100%';
+                bar.style.bottom = '-80px';
             });
 
             e.addEventListener('mouseleave', function (element) {

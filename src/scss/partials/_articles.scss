@@ -1,12 +1,22 @@
 
 .main-articles {
-  padding: 60px 0 70px 0;
+  padding: 20px 0 20px 0;
+
+  @media #{$tablet}{
+    padding: 60px 0 70px 0;
+  }
+
 }
 
 .article-box {
   position: relative;
   display: inline-block;
   overflow: hidden;
+  margin-bottom: 20px;
+
+  @media #{$tablet} {
+    margin-bottom: 0;
+  }
 
   &-bar { //belka półprzezroczysta
     position: absolute;
@@ -16,28 +26,24 @@
     width: 100%;
     padding: 20px;
     transition: 0.3s linear all;
-
   }
 
-  .hide {
-    opacity: 0;
-  }
 
-  &-imgcontainer {
-    overflow: hidden;
+  &-img-container {
     position: relative;
+    overflow: hidden;
   }
 
   &-img {
     display: block;
     width: 100%;
     transition: 0.5s ease;
-
+    &:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
   }
 
-  //&:hover {
-  //  transform: scale(1.05) rotate(2deg);
-  //}
+
 
 
 
@@ -49,13 +55,25 @@
   border-bottom: 2px solid $primary;
   padding-bottom: 6px;
   min-width: 140px;
+
+  @media #{$tablet}{
+    white-space: normal;
+    font-size: 14px;
+    margin: 0;
+  }
 }
 
 //BOX TEKSTOWY
+
+
 &-text {
   padding: 28px;
   height: 100%;
   border: 2px solid $primary;
+
+  @media #{$tablet} {
+
+  }
 }
 
 &-content {
@@ -68,3 +86,5 @@
 }
 
 }
+
+

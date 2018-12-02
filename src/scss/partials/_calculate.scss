@@ -3,6 +3,7 @@
   background-color: #f9f9f9;
   padding: 30px 0;
 
+
   .form-calc {
     margin-top: 15px;
     flex-direction: column;
@@ -29,120 +30,9 @@
     background-image: url("../images/arrow2_2.png");
     background-repeat: no-repeat;
     background-position: 285px;
-
-
   }
   
-
-
-
-
-
-  // DROP DOWN LIST
-
-  //.drop_down_list {
-  //  border: 1px solid $primary;
-  //  width: 280px;
-  //  height: 40px;
-  //  background-color: white;
-  //  margin-top: 20px;
-  //  position: relative;
-  //  display: flex;
-  //  align-items: center;
-  //  padding-left: 10px;
-  //}
-
-  /*DROPDOWN*/
-  //.list_label {
-  //  color: $text;
-  //  font-size: 20px;
-  //  font-weight: 300;
-  //}
-  //
-  //.list_arrow {
-  //  width: 0;
-  //  height: 0;
-  //  border-left: 15px solid transparent;
-  //  border-right: 15px solid transparent;
-  //  border-top: 15px solid $primary;
-  //  display: block;
-  //  position: absolute;
-  //  right: 8px;
-  //  top: 12px;
-  //  cursor: pointer;
-  //}
-  //
-  //.list_panel {
-  //  background-color: white;
-  //  border: 1px solid $primary;
-  //  width: 280px;
-  //  list-style: none;
-  //  left: -1px;
-  //  z-index: 2;
-  //  position: absolute;
-  //  top: 22px;
-  //  visibility: hidden;
-  //  padding: 0;
-  //}
-  //
-  //.list_panel li {
-  //  padding: 10px;
-  //  cursor: pointer;
-  //  color: $text;
-  //
-  //  &:hover {
-  //    background-color: $primary-light20;
-  //  }
-  //}
-
-  // CHECKBOX
-
-  //.checkbox {
-  //  position: relative;
-  //  display: flex;
-  //  align-items: center;
-  //  margin-top: 20px;
-  //}
-  //
-  //.checkbox input {
-  //  display: block;
-  //  opacity: 0;
-  //  height: 48px;
-  //  position: absolute;
-  //  width: 48px;
-  //  cursor: pointer;
-  //}
-  //
-  //.checkbox label {
-  //  display: block;
-  //  padding-left: 65px;
-  //  position: relative;
-  //  font-size: 18px;
-  //  color: $text;
-  //  line-height: 48px;
-  //  cursor: pointer;
-  //}
-  //
-  //.checkbox label::before, .checkbox label::after {
-  //  border: 1px solid $primary;
-  //  content: "";
-  //  display: block;
-  //  position: absolute;
-  //  height: 48px;
-  //  width: 48px;
-  //  left: 0;
-  //  top: 24px;
-  //  transform: translate(0, -50%);
-  //}
-  //.checkbox label::after {
-  //  background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2233.875%22%20height%3D%2233%22%20viewBox%3D%220%200%2033.875%2033%22%3E%0A%20%20%3Cpath%20d%3D%22M9.470%2C15.209%20L14.061%2C24.104%20C14.061%2C24.104%2021.522%2C6.026%2033.287%2C-0.000%20C33.000%2C4.304%2031.852%2C8.035%2033.861%2C12.626%20C28.696%2C13.774%2018.078%2C26.687%2014.635%2C33.000%20C9.756%2C26.974%204.017%2C22.382%20-0.000%2C20.948%20L9.470%2C15.209%20Z%22%20fill%3D%22%2327c7ab%22/%3E%0A%3C/svg%3E%0A") no-repeat center;
-  //  border: 0;
-  //  display: none;
-  //}
-  //
-  //.checkbox input:checked + label::after {
-  //  display: block;
-  //}
+// CHECKBOX
 
   .checkbox {
     cursor: pointer;
@@ -169,11 +59,6 @@
     background: url("../images/form_ok.jpg") no-repeat center;
   }
 
-  //.active {
-  //  background: url('../images/form_ok.jpg');
-  //  width: 48px;
-  //  height: 40px;
-  //}
 
   // ORDER SUMMARY
   .summary_panel {
