@@ -1,4 +1,8 @@
-# beauty-pack
+<p align="center">
+  <img height='70px' src="http://kasialach.pl/images/slice1.png">
+</p>
+
+# Beauty Pack
 
 A website for an imaginary beauty product subscription service. Features a JavaScript slider and a real time order calculator.
 
