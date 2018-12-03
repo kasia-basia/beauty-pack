@@ -1,6 +1,7 @@
 
 * {
   box-sizing: border-box;
+
 }
 
 .container {
@@ -31,6 +32,9 @@ body {
 }
 .text-underline.no-text-shadow{
   text-shadow: none;
+  box-shadow:
+          inset 0 -0.07em white,
+          inset 0 -0.15em $primary-multiply;
 }
 
 .text-underline {

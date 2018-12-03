@@ -27,9 +27,10 @@
     color: $text;
     font-family: 'Muli', sans-serif;
     position: relative;
-    background-image: url("../images/arrow2_2.png");
+    background-image: url("../images/arrow.png");
     background-repeat: no-repeat;
-    background-position: 285px;
+    background-size: contain;
+    background-position: 310px;
   }
   
 // CHECKBOX

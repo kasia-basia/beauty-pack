@@ -14,41 +14,44 @@
 </head>
 <body>
 <!-- Header -->
-<header class="page-header">
+<div class="container">
+    <header class="page-header">
+        <div class="header-content">
+            <div class="page-logo-container">
+                <h1 class="page-logo">
+                    <a href="/" class="page-logo-link"><img src="./images/slice1.png" alt="Beauty Pack logo"
+                                                            class="logo-img"></a>
+                </h1>
+            </div>
 
-    <div class="page-logo-container">
-        <h1 class="page-logo">
-            <a href="/" class="page-logo-link"><img src="./images/slice1.png" alt="Beauty Pack logo"
-                                                    class="logo-img"></a>
-        </h1>
-    </div>
-
-    <nav class="page-nav">
-        <ul class="page-nav-list">
-            <li><a href="">About us</a>
-                <ul class="page-nav-sublist">
-                    <li><a href="">Current Beauty Pack</a></li>
-                    <li><a href="">Our team</a></li>
-                    <li><a href="">Our story</a></li>
+            <nav class="page-nav">
+                <ul class="page-nav-list">
+                    <li class="about x scroll"><a href="" >About us</a>
+                        <ul class="page-nav-sublist">
+                            <li><a href="">Current Beauty Pack</a></li>
+                            <li><a href="">Our team</a></li>
+                            <li><a href="">Our story</a></li>
+                        </ul>
+                    </li>
+                    <li class="pricing x scroll"><a href="">Pricing</a></li>
+                    <li class="contact x scroll"><a href="">Get in touch</a></li>
                 </ul>
-            </li>
-            <li><a href="">Pricing</a></li>
-            <li><a href="">Get in touch</a></li>
-        </ul>
-    </nav>
-
-    <div class="button_container" id="menu">
-        <div class="bars">
-            <div class="top"></div>
-            <div class="middle"></div>
-            <div class="bottom"></div>
+            </nav>
         </div>
-    </div>
 
-    <div class="overlay" id="overlay"></div>
+        <div class="button_container" id="menu">
+            <div class="bars">
+                <div class="top"></div>
+                <div class="middle"></div>
+                <div class="bottom"></div>
+            </div>
+        </div>
 
+        <div class="overlay" id="overlay"></div>
+    </header>
 
-</header>
+</div>
+
 <!--section-->
 
 <!--Slider-->
@@ -83,7 +86,7 @@
                         <img src="./images/s2.png" alt="" class="banner-slide-img">
                         <div class="banner-slide-text">
                             <img src="./images/slice2.png" alt="Beauty Pack logo" class="banner-logo">
-                            <p>Enim.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis ea
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis ea
                                 eveniet
                                 odio quasi rerum.</p>
                             <button class="btn banner-slide-btn">
@@ -101,9 +104,7 @@
                             <img src="./images/slice2.png" alt="Beauty Pack logo" class="banner-logo">
                             <p>Amet, consectetur adipisicing elit. Debitis ea eveniet
                                 odio quasi rerum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
-                                ea
-                                eveniet odio quasi
-                                rerum. Enim.Lorem ipsum dolor sit </p>
+                                ea eveniet odio quasi rerum. Enim lorem ipsum dolor sit </p>
                             <button class="btn banner-slide-btn">
                                 <a href="" class="banner-slide-btn-link">Learn more</a>
                             </button>
@@ -118,7 +119,7 @@
 </section> <!--section-->
 
 <!--Articles-->
-<section class="main-articles">
+<section class="main-articles" id="articles">
 
     <div class="container">
 
@@ -171,7 +172,7 @@
 </section> <!--section-->
 
 <!--Pricing-->
-<section class="main-prices">
+<section class="main-prices"  id="pricing">
     <div class="container">
 
         <h2 class="section-title text-underline no-text-shadow">
@@ -319,9 +320,8 @@
     </div>
 </section>
 
-
 <!--Contact-->
-<section class="main-contact">
+<section class="main-contact" id="contact">
     <div class="container">
 
         <h2 class="section-title text-underline">

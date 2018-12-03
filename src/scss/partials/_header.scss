@@ -1,178 +1,226 @@
-
 .page-header {
-  background-color: white;
   height: 80px;
-  z-index: 999;
-  position: relative; /*Z INDEX DZIAŁA TYLKO Z POSITION*/
+  position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center
+}
+
+// HAMBURGER
+.button_container {
+  height: 100%;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease;
+  padding-top: 30px;
+
+  @media #{$desktop} {
+    display: none;
+  }
+
+  &:hover {
+    opacity: .7;
+  }
+
+  .top,
+  .middle,
+  .bottom {
+    margin-bottom: 5px;
+    background: $primary-multiply;
+    border: none;
+    height: 5px;
+    transition: all .35s ease;
+    cursor: pointer;
+  }
+
+  &.active {
+
+    .top {
+      transform: translateY(10px) translateX(0) rotate(45deg);
+      background: white;
+
+    }
+    .middle {
+      opacity: 0;
+      background: white;
+    }
+    .bottom {
+      transform: translateY(-10px) translateX(0) rotate(-45deg);
+      background: white;
+    }
+  }
+
+}
+
+.header-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+// LOGO
+.page-logo-container {
+  display: flex;
   align-items: center;
 
-  // HAMBURGER
+  h1 {
+    margin: 0;
+  }
 
-  .button_container {
+  .logo-img {
+    height: 40px;
+    margin-top: 20px;
+  }
+}
+
+// NAWIGACJA
+.page-nav {
+  z-index: 70;
+
+  .page-nav-list {
     height: 100%;
-    width: 35px;
-    cursor: pointer;
-    z-index: 100;
-    transition: opacity .25s ease;
-    padding-top: 30px;
-
-    @media #{$desktop} {
-      display: none;
-    }
-
-    &:hover {
-      opacity: .7;
-    }
-
-    .top,
-    .middle,
-    .bottom {
-      margin-bottom: 5px;
-      background: $primary-multiply;
-      border: none;
-      height: 5px;
-      transition: all .35s ease;
-      cursor: pointer;
-    }
-
-    &.active {
-      .top {
-        transform: translateY(10px) translateX(0) rotate(45deg);
-        background: white;
-      }
-      .middle {
-        opacity: 0;
-        background: white;
-      }
-      .bottom {
-        transform: translateY(-10px) translateX(0) rotate(-45deg);
-        background: white;
-      }
-    }
-
-
-  }
-
-  .page-logo-container {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    .logo-img {
-      height: 40px;
-      margin-top: 20px;
-    }
-  }
-
-  // OVERLAY MENU
-  .overlay {
-    position: fixed;
-    background: $primary;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
+    position: relative;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .35s, visibility .35s, height .35s;
-    overflow: hidden;
+    transition: 0.2s linear;
 
-    &.open {
-      opacity: .9;
-      visibility: visible;
-      height: 100%;
-    }
-  }
-
-
-  // NAWIGACJA
-
-  .page-nav {
-    z-index: 100;
-
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-weight: 400;
-      text-align: center;
-    }
-
-    a {
-      margin: 0;
-      text-decoration: none;
-      color: $text;
-      padding: 0 20px;
-
-    }
-
-    a:hover {
-      color: $primary-multiply;
-    }
-
-    .page-nav-list {
-      display: flex;
-      flex-direction: row;
-    }
-
-    .page-nav-list-active{
-      font-size: 40px;
-    }
-
-    &-sublist {
-      background-color: $primary-light20;
-      list-style: none;
-      position: absolute;
-      padding: 0;
-      margin: 0;
-      top: calc(100% + 25px);
-      left: 50%;
-      transform: translate(-50%, 0);
-      opacity: 0;
-      visibility: hidden;
-      transition: 0.4s;
-      width: 165px;
-    }
-
-    &-sublist:after { // trojkącik do góry
-      content: '';
-      width: 0;
-      height: 0;
-      border: 10px solid transparent;
-      border-bottom-color: $primary-light20;
-      display: block;
-      position: absolute;
-      left: 50%;
-      top: -20px; /*border razy 2*/
-      transform: translate(-50%, 0);
-    }
-
-    &-sublist:before { // łatka do hovera
-      content: '';
-      width: 100%;
-      height: 40px;
-      background: transparent;
-      position: absolute;
-      left: 0;
-      top: -40px;
-    }
-
-    .page-nav-list li:hover .page-nav-sublist {
+    @media #{$desktop} { // show nav only on mobile, tablet
       opacity: 1;
       visibility: visible;
     }
-
-    .page-nav-sublist a {
-      text-transform: none;
-      font-weight: normal;
-      text-align: center;
-      height: auto;
-      padding: 10px;
-    }
-
   }
 
+  .page-nav-list-active {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    padding-top: 20%;
+    left: 0;
+    top: 0;
+    font-size: 30px;
+
+    li {
+      opacity: 0;
+      margin: 20px;
+      animation: fadeInRight .5s ease forwards;
+      animation-delay: 0.3s;
+      &:nth-of-type(2) {
+        animation-delay: .4s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: .5s;
+      }
+    }
+  }
+
+  a {
+    margin: 0;
+    text-decoration: none;
+    color: $text;
+    padding: 0 20px;
+  }
+}
+
+.page-nav > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  text-align: center;
+}
+
+// SUBLISTA
+
+.page-nav-sublist {
+  background-color: $primary-light20;
+  list-style: none;
+  position: absolute;
+  margin: 0;
+  top: 90%;
+  left: 15%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+  width: 200px;
+  padding: 10px;
+
+  :after { // trojkącik do góry
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: $primary-light20;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -20px; /*border razy 2*/
+    transform: translate(-50%, 0);
+  }
+
+  :before { // łatka do hovera
+    content: '';
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    position: absolute;
+    left: 0;
+    top: -40px;
+  }
+
+  a {
+    text-transform: none;
+    font-weight: normal;
+    text-align: center;
+    height: auto;
+    padding: 15px;
+  }
+}
+
+.page-nav-list li:hover .page-nav-sublist {
+  opacity: 1;
+  visibility: visible;
+}
+
+// OVERLAY
+.overlay {
+  position: fixed;
+  background: $primary;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.3s linear;
+  z-index: 50;
+
+  &.open {
+    opacity: .9;
+    width: 100vw;
+    z-index: 50;
+  }
+}
+
+// ANIMATION
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    margin-left: 70px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
 }
