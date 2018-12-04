@@ -4,7 +4,7 @@
 
 # Beauty Pack
 
-A website for an imaginary beauty product subscription service. Features a JavaScript slider and a real time order calculator.
+A website for an imaginary beauty product subscription service. Features a JavaScript slider, a real time order calculator and form validation.
 
 #### tools used
 HTML, SASS, gulp, JavaScript (ES6)
