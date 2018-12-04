@@ -11,6 +11,11 @@ class Calculator {
 
         this.gift = document.getElementById('gift');
         this.gift.onchange = this.calculateGift.bind(this);
+
+        this.order = document.getElementById('order');
+        this.order.onclick = this.handleSubmit.bind(this);
+
+
     }
 
     calculatePlan(e) {
@@ -18,6 +23,9 @@ class Calculator {
         const showPlanValue = document.querySelector('.plan-value');
         showPlanName.innerHTML = e.target.selectedOptions[0].innerHTML;
         showPlanValue.innerHTML = e.target.value;
+        if (showPlanName.innerHTML === 'Select'){
+            showPlanName.innerHTML = '';
+        }
         this.updateSum();
     };
 
@@ -26,13 +34,19 @@ class Calculator {
         const showDeliveryValue = document.querySelector('.delivery-value');
         showDeliveryName.innerHTML = e.target.selectedOptions[0].innerHTML;
         showDeliveryValue.innerHTML = e.target.value;
+        if (showDeliveryName.innerHTML === 'Select'){
+            showDeliveryName.innerHTML = '';
+        }
         this.updateSum();
     }
 
 
     calculateSkin(e) {
-        const showDeliverySkin = document.querySelector('.skin');
-        showDeliverySkin.innerHTML = e.target.selectedOptions[0].innerHTML;
+        const showSkinName = document.querySelector('.skin');
+        showSkinName.innerHTML = e.target.selectedOptions[0].innerHTML;
+        if (showSkinName.innerHTML === 'Select'){
+            showSkinName.innerHTML = '';
+        }
         this.updateSum();
     }
 
@@ -57,6 +71,30 @@ class Calculator {
         sumDisplay.innerText = (Number(planSum) + Number(deliverySum) + Number(giftSum)).toFixed(2);
     }
 
-}
+    handleSubmit(e){
+        e.preventDefault();
+        const errors = [];
+        const errorList = document.getElementById('error-list-order');
+        let correct = true;
 
+        if (this.plan.selectedOptions[0].innerHTML === 'Select'){
+            errors.push('Choose your plan.');
+            correct = false;
+        }
+        if (this.skin.selectedOptions[0].innerHTML === 'Select'){
+            errors.push('Choose your skin type.');
+            correct = false;
+        }
+        if (this.delivery.selectedOptions[0].innerHTML === 'Select'){
+            errors.push('Choose your delivery.');
+            correct = false;
+        }
+
+        if (!correct){
+            errorList.innerText = errors.join("\r\n");
+        } else {
+            errorList.innerText = '';
+        }
+    }
+}
 export {Calculator}

@@ -19,7 +19,7 @@
         <div class="header-content">
             <div class="page-logo-container">
                 <h1 class="page-logo">
-                    <a href="/" class="page-logo-link"><img src="./images/slice1.png" alt="Beauty Pack logo"
+                    <a href="#" class="page-logo-link"><img src="./images/slice1.png" alt="Beauty Pack logo"
                                                             class="logo-img"></a>
                 </h1>
             </div>
@@ -257,6 +257,7 @@
 
                         <label for="plan">Choose your plan</label>
                         <select name="plan" id="plan" class="form-select">
+                            <option value="">Select</option>
                             <option value="34.99">Basic</option>
                             <option value="39.99">Perfect</option>
                             <option value="48.99">Expert</option>
@@ -264,6 +265,7 @@
 
                         <label for="subscription">Choose your skin type</label>
                         <select name="skin" id="skin" class="form-select">
+                            <option value="">Select</option>
                             <option value="Dry">Dry</option>
                             <option value="Oliy">Oily</option>
                             <option value="Mixed">Mixed</option>
@@ -271,6 +273,7 @@
 
                         <label for="delivery">Choose delivery option</label>
                         <select name="delivery" id="delivery" class="form-select">
+                            <option value="">Select</option>
                             <option value="8.99">Regular</option>
                             <option value="14.99">Express</option>
                         </select>
@@ -313,7 +316,8 @@
                         <div class="sum"><strong></strong></div>
                     </div>
 
-                    <button href="" class="btn btn-order">ORDER</button>
+                    <button type="submit" class="btn btn-order" id="order">ORDER</button>
+                    <p class="error-list" id="error-list-order"></p>
                 </section>
             </div>
         </div>
@@ -354,18 +358,19 @@
                 <!--<div class="form-img"></div>-->
                 <div class="form-row">
                     <label class="form-checkbox">
-                        <input type="checkbox" name="regulations">
+                        <input type="checkbox" name="terms" id="terms">
                         <span>
                                 I accept the terms and conditions
                         </span>
                     </label>
                 </div>
                 <div class="form-row">
-                    <button type="submit" class="btn">
+                    <button type="submit" id='contact-submit' class="btn">
                         Submit
                     </button>
+                    <p class="error-list" id="error-list-contact"></p>
+                    <p class="form-confirmation" id="form-confirmation"></p>
                 </div>
-
 
             </div>
 
@@ -377,7 +382,8 @@
 
 <!--Footer-->
 <footer>
-
+    <span class="footer-span">kasia lach 2018</span>
+    <a class="footer-link" href="http://kasialach.pl/" target="_blank">www.kasialach.pl</a>
 </footer>
 
 
